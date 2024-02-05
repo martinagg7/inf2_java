@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>localstorage</title>
+</head>
+<body>
+    <!--acesos a la web-->
+    <p id="visitas">..</p>
+    <script>
+    
+        function accesos(){
+            var contadorvisitas=localStorage.getItem("visitas")
+
+            if (contadorvisitas===null){
+                contadorvisitas=0
+            }
+            else{
+                contadorvisitas=parseInt(contadorvisitas)+1
+            }
+            localStorage.setItem("visitas",contadorvisitas)
+            document.getElementById("visitas").textContent="Numero de visitas "+contadorvisitas
+        }
+
+        document.addEventListener("DOMContentLoaded",accesos)
+
+    </script>
+</body>
+</html>

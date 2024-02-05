@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 2</title>
+    
+</head>
+<body>
+    <h1 id="contador">Contador</h1>
+    <button id="botoncontador">Incrementar</button>
+    <script>
+        var contador=0
+
+    function incrementar(){
+        contador++
+        document.getElementById("contador").textContent="Contador"+contador
+    }
+
+    document.getElementById("botoncontador").addEventListener("click",incrementar)
+    </script>
+
+
+    <!--esto callo en el examen,contador en segundos de lo que llevaba la página cargada-->
+    <footer>
+        <p>Nombre del alumno</p><p id="contador2">Contadoren segundos</p>
+    </footer>   
+    <script>
+        var segundos=0
+        function secundero(){
+            segundos++
+            document.getElementById("contador2").textContent=segundos
+        }
+        //llamar en un intervalo de segundos
+        setInterval(secundero,100)
+    </script>
+
+    <!--contador para saber cuantas teclas pulse-->
+    <input type="texto" id="contadorteclas" placeholder="Escribe aqui">
+    <p id="teclaspulsadas">teclas pulsadas</p>
+
+    <script>
+        var teclas=0
+        function contarTeclas(){
+            teclas++
+            document.getElementById("teclaspulsadas").textContent=teclas+" teclas pulsadas"
+        }
+
+        document.getElementById("contadorteclas").addEventListener("keydown",contarTeclas)
+    </script>
