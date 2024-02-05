@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 4</title>
+</head>
+<body>
+    <!--contar las palabras de un area de texto y que establezca un límite-->
+    <textarea id="mitextarea"placeholder="escribe aqui" maxlength="60" rows="10" oninput="contar()"></textarea>
+    <p id="aviso">número de caracteres restantes</p>
+    <script>
+        function contar(){
+            var textarea=document.getElementById("mitextarea")
+            const maxLength=50
+            var palabrasRestantes=maxLength-textarea.value.length
+            
+            var aviso=document.getElementById("aviso")
+            aviso.textContent="Numero de palabras restantes"+palabrasRestantes
+            if (palabrasRestantes<0){
+                aviso.style.color="red"
+                
+            }else{
+                aviso.style.color="black"
+            }
+        } 
+    </script>
+</body>
+</html>

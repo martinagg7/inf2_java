@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abrir formulario</title>
+    <style>
+        .Formulario{
+            display: none;
+            position: absolute;
+            background-color: skyblue;
+            
+        }
+        .contenedor{
+            z-index:1;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+<div class="contendor"> 
+    <button onclick="abrirFormulario()">Abrir Formulario</button>
+
+    <div id="miFormulario" class="Formulario">
+            <span  onclick="cerrarFormulario()">X</span>
+            <h3>Formulario</h3>
+            <form onsubmit="cerrarFormulario()">
+                <label for="name">Nombre</label>
+                <input type="text" name="Nombre" id="name" placeholder="Nombre">
+                <input type="submit" value="enviar">
+                </form>
+            </div>
+    </div>
+</div> 
+    <p>textotexto texto texto texto texto texto texto texto texto texto texto texto texto  </p>
+    <script>
+        function abrirFormulario(){
+            document.getElementById("miFormulario").style.display="block"
+
+        }
+        function cerrarFormulario(){
+            document.getElementById("miFormulario").style.display="none"
+        }
+    </script>
+</body>
+</html>

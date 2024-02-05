@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt</title>
+</head>
+<body>
+    <script>
+        var respuesta=prompt("ingrese respuesta")
+        var respuesta2=localStorage.getItem("nombre")
+        if (respuesta==!null||respuesta2!=null){
+            if (respuesta==!null){
+                alert("Hola"+respuesta)
+            }else{
+                alert("Hola"+respuesta2)
+            }
+        }
+        else{
+            alert("has cancelado la operacio")
+        }
+        
+    </script>
+</body>
+</html>
